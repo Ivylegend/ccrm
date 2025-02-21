@@ -22,7 +22,7 @@ const footerLinks = [
 const socialLinks = [
   {
     icon: <Facebook color="white" />,
-    url: "https://www.facebook.com/ccrm2022",
+    url: "https://www.facebook.com/share/1JUd8RDpPk/",
   },
   {
     icon: <Mail color="white" />,
