@@ -3,7 +3,6 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-// import { Icons } from "@/components/icons"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,7 +14,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import Logo from "../public/ccrm-logo.jpeg";
 
 const components: { title: string; href: string }[] = [
@@ -30,20 +28,20 @@ const components: { title: string; href: string }[] = [
 ];
 
 const Navbar = () => {
-  const navLinks = [
-    {
-      name: "About Us",
-      url: "/about",
-    },
-    {
-      name: "Programs",
-      url: "/programs",
-    },
-    {
-      name: "NewLetter",
-      url: "/newsletter",
-    },
-  ];
+  // const navLinks = [
+  //   {
+  //     name: "About Us",
+  //     url: "/about",
+  //   },
+  //   {
+  //     name: "Programs",
+  //     url: "/programs",
+  //   },
+  //   {
+  //     name: "NewLetter",
+  //     url: "/newsletter",
+  //   },
+  // ];
 
   //   return (
   //     <nav className="w-full p-8 flex justify-between items-center">
@@ -73,7 +71,10 @@ const Navbar = () => {
           <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 w-[320px]">
-              <ListItem href="/about#how-it-started" title="How it all started" />
+              <ListItem
+                href="/about#how-it-started"
+                title="How it all started"
+              />
               <ListItem href="/about#vision" title="Vision & Mission" />
             </ul>
           </NavigationMenuContent>

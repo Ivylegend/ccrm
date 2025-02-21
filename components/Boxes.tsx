@@ -8,7 +8,7 @@ const Boxes = () => {
       <h2 className="font-semibold text-xl">Vision</h2>
       <p>
         That every member will be a living model of genuine salvation,
-        sanctification and service, to God's glory.
+        sanctification and service, to God&apos;s glory.
       </p>
     </div>
   );

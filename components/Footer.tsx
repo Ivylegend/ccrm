@@ -56,7 +56,7 @@ const Footer = () => {
         <div className="w-1/4 text-white space-y-6">
           <Image src={Logo} alt="logo" className="w-60" />
           <p className="font-semibold text-xl">
-            Children's Creative Resource Ministry
+            Children&apos;s Creative Resource Ministry
           </p>
           <i>Teaching and equipping children for Christ</i>
           <p>

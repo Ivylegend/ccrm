@@ -8,10 +8,10 @@ const Hero = () => {
       <div className="w-full md:w-1/2 flex justify-between h-full flex-col space-y-5">
         <div className="space-y-5 py-10">
           <h1 className="font-bold text-6xl text-[#0A1768]">
-            Children's Creative Resource Ministry
+            Children&apos;s Creative Resource Ministry
           </h1>
           <p className="font-medium text-xl">
-            At Children's Creative Resource Ministry, we are dedicated to
+            At Children&apos;s Creative Resource Ministry, we are dedicated to
             nurturing young hearts with the gospel of Jesus Christ. Through
             trained and passionate mentors, we guide children to grow in faith,
             wisdom, and character—physically, spiritually, mentally, and
@@ -20,7 +20,7 @@ const Hero = () => {
         </div>
 
         <p className="italic mt-auto underline font-semibold">
-          "Teaching and equipping children for Christ"
+          &quot;Teaching and equipping children for Christ&quot;
         </p>
       </div>
       <Image src={ChildrenPics} className="" alt="children" />
