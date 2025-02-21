@@ -10,8 +10,6 @@ export default function Home() {
     <div>
       <Hero />
 
-      <OurVision />
-
       <section className="flex mx-auto p-6 md:p-10 lg:py-20 flex-col md:flex-row justify-center items-center md:gap-8 w-full lg:w-[80%]">
         <h2 className="my-8 md:hidden font-semibold text-2xl text-[#0A1768]">
           HOW IT ALL BEGAN
@@ -39,6 +37,8 @@ export default function Home() {
           <Button className="bg-[#0A1768] font-semibold">Read More</Button>
         </div>
       </section>
+
+      <OurVision />
 
       <OurMinistries />
 

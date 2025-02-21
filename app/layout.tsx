@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Children Creative Resource Miinistry",
-  description: "We care for the children",
+  description: "Teaching and equipping children for Christ",
 };
 
 export default function RootLayout({
