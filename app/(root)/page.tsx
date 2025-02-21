@@ -2,7 +2,6 @@ import Hero from "@/components/Hero";
 import OurVision from "@/components/OurVision";
 import Image from "next/image";
 import founders from "../../public/founders.jpeg";
-import UpcomingPrograms from "@/components/UpcomingPrograms";
 import { Button } from "@/components/ui/button";
 import OurMinistries from "@/components/OurMinistries";
 
