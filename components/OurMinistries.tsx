@@ -1,9 +1,16 @@
-import Image, { StaticImageData } from "next/image";
+"use client";
+
+import { StaticImageData } from "next/image";
 import React from "react";
 import spalsh1 from "../public/blue-splash.jpeg";
 import spalsh2 from "../public/purple-splash.jpeg";
 import spalsh3 from "../public/yellow-splash.jpeg";
 import bicycle from "../public/ride-bicycle.jpg";
+import bicycle2 from "../public/image.png";
+import bicycle3 from "../public/about-image.png";
+import ImageStackCarousel from "./ImageStackCarousel";
+
+const bicycleImages = [bicycle, bicycle2, bicycle3, bicycle, bicycle2, bicycle3];
 
 declare type MinistryCardProps = {
   title: string;
@@ -24,20 +31,8 @@ const MinistryCard = ({
         reverse ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className="relative md:w-1/2">
-        {/* Splash Background (Behind) */}
-        <Image
-          src={splash}
-          alt="splash bg"
-          className="absolute left-0 inset-0 object-contain w-full md:h-[400px] -z-10"
-        />
-
-        {/* Bicycle Image (In Front) */}
-        <Image
-          src={bicycle}
-          alt="bicycle"
-          className="relative z-10 h-[200px] bg-black border md:h-[400px] object-contain w-[400px]"
-        />
+      <div className="md:w-1/2 overflow-hidden">
+        <ImageStackCarousel images={bicycleImages} splash={splash} />
       </div>
       <div className="md:w-1/2">
         <h3 className="font-semibold text-[#0A1768] italic text-2xl">
@@ -71,7 +66,7 @@ const OurMinistries = () => {
       />
 
       <MinistryCard
-        title="Games Outreach"
+        title="Character and Charisma Camp"
         description="Good News Club ministries take place in neighborhood settings such as homes, schools, and community centers all over the world and are designed to bring the Gospel of Christ to children on their level in their environment."
         splash={spalsh3}
         reverse
