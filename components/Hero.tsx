@@ -4,7 +4,7 @@ import ChildrenPics from "../public/children.webp";
 
 const Hero = () => {
   return (
-    <div className="max-h-screen w-full flex items-start justify-center gap-8 p-20">
+    <div className="w-full flex items-start justify-center gap-8 p-20">
       <div className="w-full md:w-1/2 flex justify-between h-full flex-col space-y-5">
         <div className="space-y-5 py-10">
           <h1 className="font-bold text-6xl text-[#0A1768]">
