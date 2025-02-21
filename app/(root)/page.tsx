@@ -13,20 +13,23 @@ export default function Home() {
 
       <OurVision />
 
-      <section className="flex mx-auto p-20 justify-center items-center gap-8 w-[80%]">
+      <section className="flex mx-auto p-6 md:p-10 lg:py-20 flex-col md:flex-row justify-center items-center md:gap-8 w-full lg:w-[80%]">
+        <h2 className="my-8 md:hidden font-semibold text-2xl text-[#0A1768]">
+          HOW IT ALL BEGAN
+        </h2>
         <Image src={founders} alt="founders" />
         <div className="space-y-5 max-w-[480px]">
-          <h2 className="font-semibold text-2xl text-[#0A1768]">
-            A new beginning
+          <h2 className="hidden md:block font-semibold text-2xl text-[#0A1768]">
+            HOW IT ALL BEGAN
           </h2>
-          <div className="text-lg font-medium">
-            <p>
-              The vision of Children&apos;s Creative Resource Ministry (CCRM) was
-              birthed in 2022 through a couple, Evangelists Nick & Shola Icha.
-              This was after spending time with the Lord to receive directions.
-              In 2021, Evangelist Nick Icha retired from Children Evangelism
-              Ministry International (CEM) after a 30-year full time missionary
-              service with the organisation.
+          <div className="md:text-lg font-medium">
+            <p className="font-medium">
+              The vision of Children&apos;s Creative Resource Ministry (CCRM)
+              was birthed in 2022 through a couple, Evangelists Nick & Shola
+              Icha. This was after spending time with the Lord to receive
+              directions. In 2021, Evangelist Nick Icha retired from Children
+              Evangelism Ministry International (CEM) after a 30-year full time
+              missionary service with the organisation.
             </p>
             <p>
               CCRM was named on 23rd July, 2022 and registered with the

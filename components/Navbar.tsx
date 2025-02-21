@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../public/ccrm-logo.jpeg";
+import MobileNav from "./MobileNav";
 
 const components: { title: string; href: string }[] = [
   {
@@ -59,7 +60,7 @@ const Navbar = () => {
   //     </nav>
   //   );
   return (
-    <NavigationMenu>
+    <NavigationMenu className="w-full flex justify-between items-center">
       <NavigationMenuList className="flex justify-between w-full">
         <NavigationMenuItem>
           <Link className="flex h-full w-full rounded-md p-6" href="/">
@@ -67,7 +68,7 @@ const Navbar = () => {
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 w-[320px]">
@@ -80,7 +81,7 @@ const Navbar = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger>Our Programs</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4">
@@ -95,7 +96,7 @@ const Navbar = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <Link href="/newsletter" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               NewsLetter
@@ -103,6 +104,8 @@ const Navbar = () => {
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
+
+      <MobileNav />
     </NavigationMenu>
   );
 };

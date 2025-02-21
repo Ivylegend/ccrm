@@ -1,15 +1,17 @@
 import { LucideScanEye } from "lucide-react";
 import React from "react";
 
-const Boxes = () => {
+declare type BoxesProps = {
+  title: string;
+  body: string;
+};
+
+const Boxes = ({ title, body }: BoxesProps) => {
   return (
-    <div className="bg-white shadow-lg w-[400px] p-5 rounded-md flex flex-col gap-3">
+    <div className="bg-white shadow-lg w-full md:w-[400px] p-5 rounded-md flex flex-col gap-3">
       <LucideScanEye />
-      <h2 className="font-semibold text-xl">Vision</h2>
-      <p>
-        That every member will be a living model of genuine salvation,
-        sanctification and service, to God&apos;s glory.
-      </p>
+      <h2 className="font-semibold text-xl">{title}</h2>
+      <p>{body}</p>
     </div>
   );
 };

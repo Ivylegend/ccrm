@@ -20,30 +20,30 @@ const MinistryCard = ({
 }: MinistryCardProps) => {
   return (
     <div
-      className={`flex my-10 mx-auto w-full md:w-[80%] gap-8 items-center justify-center ${
-        reverse ? "flex-row-reverse" : ""
+      className={`flex flex-col md:flex-row my-10 mx-auto w-full md:w-[80%] gap-4 md:gap-8 items-center justify-center ${
+        reverse ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className="relative w-1/2">
+      <div className="relative md:w-1/2">
         {/* Splash Background (Behind) */}
         <Image
           src={splash}
           alt="splash bg"
-          className="absolute left-0 inset-0 object-contain w-full h-[400px] -z-10"
+          className="absolute left-0 inset-0 object-contain w-full md:h-[400px] -z-10"
         />
 
         {/* Bicycle Image (In Front) */}
         <Image
           src={bicycle}
           alt="bicycle"
-          className="relative z-10 h-[400px] object-contain w-[400px]"
+          className="relative z-10 h-[200px] bg-black border md:h-[400px] object-contain w-[400px]"
         />
       </div>
-      <div className="w-1/2">
+      <div className="md:w-1/2">
         <h3 className="font-semibold text-[#0A1768] italic text-2xl">
           {title}
         </h3>
-        <p className="text-lg my-5">{description}</p>
+        <p className="text-lg my-2 md:my-5">{description}</p>
       </div>
     </div>
   );
@@ -51,8 +51,8 @@ const MinistryCard = ({
 
 const OurMinistries = () => {
   return (
-    <section className="min-h-screen p-20">
-      <h2 className="text-center font-semibold text-5xl text-[#0A1768]">
+    <section className="min-h-screen p-6 md:p-10 lg:p-20">
+      <h2 className="text-center font-semibold text-3xl mb-10 md:mb-0 lg:text-5xl text-[#0A1768]">
         Our Ministries
       </h2>
 
