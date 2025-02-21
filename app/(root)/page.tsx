@@ -21,7 +21,7 @@ export default function Home() {
           </h2>
           <div className="text-lg font-medium">
             <p>
-              The vision of Children's Creative Resource Ministry (CCRM) was
+              The vision of Children&apos;s Creative Resource Ministry (CCRM) was
               birthed in 2022 through a couple, Evangelists Nick & Shola Icha.
               This was after spending time with the Lord to receive directions.
               In 2021, Evangelist Nick Icha retired from Children Evangelism

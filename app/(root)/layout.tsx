@@ -1,7 +1,5 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
-import { redirect } from "next/navigation";
 
 export default async function RootLayout({
   children,
