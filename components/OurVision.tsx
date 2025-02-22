@@ -7,7 +7,7 @@ const OurVision = () => {
       <Boxes
         title={"Our Vision"}
         body={
-          "Scriptural basis: The Lord gave the word: great was the company of those that published it. Psalm 68:11 (KJV) and A wise teacher makes learning a joy; Proverbs 15:2a (TLB)"
+          "Scriptural basis: The Lord gave the word: great was the company of those that published it. Psalm 68:11 (KJV) A wise teacher makes learning a joy; Proverbs 15:2a (TLB)"
         }
       />
       <Boxes

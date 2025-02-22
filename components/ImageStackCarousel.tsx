@@ -1,14 +1,18 @@
 "use client";
 
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import React, { useState, useEffect } from "react";
 
 interface ImageStackCarouselProps {
-  images: StaticImageData[]; 
-  splash: StaticImageData; 
+  images: StaticImageData[];
+  splash: StaticImageData;
 }
 
-const ImageStackCarousel: React.FC<ImageStackCarouselProps> = ({ images, splash }) => {
+const ImageStackCarousel: React.FC<ImageStackCarouselProps> = ({
+  images,
+  splash,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -28,7 +32,7 @@ const ImageStackCarousel: React.FC<ImageStackCarouselProps> = ({ images, splash 
   };
 
   return (
-    <div className="relative w-[360px] md:w-[400px] h-[400px] mx-auto">
+    <div className="relative w-[360px] md:w-[400px] h-[250px] md:h-[400px] mx-auto">
       {/* Static Splash Background */}
       <Image
         src={splash}
@@ -70,15 +74,15 @@ const ImageStackCarousel: React.FC<ImageStackCarouselProps> = ({ images, splash 
       {/* Controls */}
       <button
         onClick={handlePrev}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-20"
+        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-1 rounded-full shadow-md z-20"
       >
-        ◀
+        <ChevronLeft />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-20"
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-1 rounded-full shadow-md z-20"
       >
-        ▶
+        <ChevronRight />
       </button>
     </div>
   );

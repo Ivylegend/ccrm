@@ -1,139 +1,92 @@
 "use client";
 
 import * as React from "react";
-
-import { cn } from "@/lib/utils";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../public/ccrm-logo.jpeg";
+import { Button } from "./ui/button";
 import MobileNav from "./MobileNav";
-
-const components: { title: string; href: string }[] = [
-  {
-    title: "Game Outreaches",
-    href: "/docs/primitives/alert-dialog",
-  },
-  {
-    title: "Easter Outreaches",
-    href: "/docs/primitives/hover-card",
-  },
-];
+import { ChevronDown } from "lucide-react";
+import { navLinks } from "@/constants";
 
 const Navbar = () => {
-  // const navLinks = [
-  //   {
-  //     name: "About Us",
-  //     url: "/about",
-  //   },
-  //   {
-  //     name: "Programs",
-  //     url: "/programs",
-  //   },
-  //   {
-  //     name: "NewLetter",
-  //     url: "/newsletter",
-  //   },
-  // ];
+  const [openDropdown, setOpenDropdown] = React.useState<string | null>(null);
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
 
-  //   return (
-  //     <nav className="w-full p-8 flex justify-between items-center">
-  //       <div>
-  //         <Image src={Logo} className="w-44" alt="logo" />
-  //       </div>
-  //       <div className="flex gap-5 text-[#2B2B3F] font-semibold uppercase">
-  //         {navLinks.map((link) => (
-  //           <Link key={link.name} href={link.url}>
-  //             {link.name}
-  //           </Link>
-  //         ))}
-  //       </div>
-  //       <Button>Donate</Button>
-  //     </nav>
-  //   );
+  // Close dropdown when clicking outside
+  React.useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setOpenDropdown(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <NavigationMenu className="w-full flex justify-between items-center">
-      <NavigationMenuList className="flex justify-between w-full">
-        <NavigationMenuItem>
-          <Link className="flex h-full w-full rounded-md p-6" href="/">
-            <Image src={Logo} className="w-44" alt="logo" />
-          </Link>
-        </NavigationMenuItem>
+    <nav className="w-full p-2 pr-6 shadow-md md:shadow-none z-40 sticky top-0 bg-white md:px-8 h-20 flex justify-between items-center">
+      {/* Logo */}
+      <div className="h-20 overflow-hidden">
+        <Image src={Logo} className="w-40 object-cover" alt="logo" />
+      </div>
 
-        <NavigationMenuItem className="hidden md:block">
-          <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 w-[320px]">
-              <ListItem
-                href="/about#how-it-started"
-                title="How it all started"
-              />
-              <ListItem href="/about#vision" title="Vision & Mission" />
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+      {/* Navigation Links */}
+      <div className="hidden md:flex gap-12 text-[#0A1768] font-semibold capitalize relative">
+        {navLinks.map((link) => (
+          <div
+            key={link.name}
+            className="relative"
+            ref={link.dropdown ? dropdownRef : null}
+          >
+            {/* Parent Link */}
+            <Link
+              href={link.url}
+              onClick={(e) => {
+                if (link.dropdown) {
+                  e.preventDefault();
+                  setOpenDropdown(
+                    openDropdown === link.name ? null : link.name
+                  );
+                }
+              }}
+              className="hover:text-blue-600 cursor-pointer flex items-center gap-1"
+            >
+              {link.name} {link.dropdown && <ChevronDown />}
+            </Link>
 
-        <NavigationMenuItem className="hidden md:block">
-          <NavigationMenuTrigger>Our Programs</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                />
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+            {/* Dropdown Menu */}
+            {link.dropdown && openDropdown === link.name && (
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-lg p-2 z-50">
+                {link.dropdown.map((sublink) => (
+                  <Link
+                    key={sublink.name}
+                    href={sublink.url}
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    {sublink.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
 
-        <NavigationMenuItem className="hidden md:block">
-          <Link href="/newsletter" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              NewsLetter
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
+      {/* Donate Button */}
+      <Button
+        variant={"outline"}
+        className="hidden md:block font-semibold border-[#0A1768] text-[#0A1768]"
+      >
+        Donate
+      </Button>
 
       <MobileNav />
-    </NavigationMenu>
+    </nav>
   );
 };
 
 export default Navbar;
-
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = "ListItem";

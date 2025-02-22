@@ -2,37 +2,7 @@ import React from "react";
 import Logo from "../public/ccrm-logo.jpeg";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { Facebook, Mail, PhoneCallIcon } from "lucide-react";
-
-const footerLinks = [
-  {
-    name: "About Us",
-    url: "/about",
-  },
-  {
-    name: "Contact Us",
-    url: "/contact",
-  },
-  {
-    name: "Newsletter",
-    url: "/newsletter",
-  },
-];
-
-const socialLinks = [
-  {
-    icon: <Facebook color="white" />,
-    url: "https://www.facebook.com/share/1JUd8RDpPk/",
-  },
-  {
-    icon: <Mail color="white" />,
-    url: "mailto:ccrmjuly2022@gmail.com",
-  },
-  {
-    icon: <PhoneCallIcon color="white" />,
-    url: "07043454841",
-  },
-];
+import { footerLinks, socialLinks } from "@/constants";
 
 const Footer = () => {
   return (
@@ -99,7 +69,9 @@ const Footer = () => {
             Join the team of rescue agents nearest to you in winning and
             discipling boys and girls for Jesus. God is counting on YOU!!!
           </p>
-          <Button className="font-semibold bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500">Contact Us</Button>
+          <Button className="font-semibold bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500">
+            Contact Us
+          </Button>
         </div>
       </div>
 
@@ -109,10 +81,6 @@ const Footer = () => {
         <p className="text-xs">
           © 2023 - 2025 Children&apos;s Creative Resource Ministry. All Rights
           Reserved.
-        </p>
-        <p className="text-xs">
-          Children&apos;s Creative Resource Ministry Inc. is a 501(c)(3)
-          non-profit organization.
         </p>
       </div>
     </footer>
