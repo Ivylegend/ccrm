@@ -92,7 +92,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 glass-effect shadow-soft animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 right-0 glass-effect bg-white shadow-md animate-fade-in">
           <div className="py-4 px-6 flex flex-col space-y-3">
             {navItems.map((item) => (
               <Link

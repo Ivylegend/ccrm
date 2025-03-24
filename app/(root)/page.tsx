@@ -21,8 +21,8 @@ export default function Home() {
           <h2 className="hidden md:block font-semibold text-2xl text-[#0A1768]">
             HOW IT ALL BEGAN
           </h2>
-          <div className="md:text-lg font-medium">
-            <p className="font-medium">
+          <div className="md:text-lg space-y-3 font-medium text-justify">
+            <p>
               The vision of Children&apos;s Creative Resource Ministry (CCRM)
               was birthed in 2022 through a couple, Evangelists Nick & Shola
               Icha. This was after spending time with the Lord to receive

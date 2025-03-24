@@ -4,7 +4,7 @@ import HeroImg from "@/public/hero-image.png";
 
 const Hero = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 p-6 pb-16 md:p-10 lg:p-20 mt-20">
+    <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 p-6 pb-16 md:p-10 lg:p-20 mt-32 md:mt-20">
       <div className="w-full md:w-1/2 flex justify-between h-full flex-col md:space-y-5">
         <div className="space-y-5 lg:py-10">
           <h1 className="font-bold text-4xl lg:text-6xl text-[#0a1666] font-balsamiq">
