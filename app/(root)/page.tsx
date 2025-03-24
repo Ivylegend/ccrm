@@ -4,7 +4,6 @@ import Image from "next/image";
 import founders from "../../public/founders.jpeg";
 import { Button } from "@/components/ui/button";
 import OurMinistries from "@/components/OurMinistries";
-import HowToGetInvolved from "@/components/HowToGetInvolved";
 import Link from "next/link";
 
 export default function Home() {
@@ -53,7 +52,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-4xl font-display font-bold text-ccrm-blue mb-4">
-                Making a Difference in Children's Lives
+                Making a Difference in Children&apos;s Lives
               </h2>
               <p className="text-lg text-gray-600 mb-6">
                 Our ministry is dedicated to helping children develop a strong
@@ -106,7 +105,7 @@ export default function Home() {
       <section className="bg-ccrm-blue py-16 px-6 text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-            Join Us in Nurturing Children's Faith
+            Join Us in Nurturing Children&apos;s Faith
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
             Together, we can make a lasting impact on the lives of children

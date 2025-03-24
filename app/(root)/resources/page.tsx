@@ -24,9 +24,9 @@ const Resources = () => {
             </h2>
             <p className="text-lg text-gray-600">
               CCRM develops a wide range of creative, biblically-sound resources
-              designed to make children's faith education engaging and
+              designed to make children&apos;s faith education engaging and
               effective. Our materials support parents, teachers, and ministry
-              leaders in nurturing children's spiritual growth.
+              leaders in nurturing children&apos;s spiritual growth.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ const Resources = () => {
               Featured Resources
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our most popular materials for children's ministry
+              Our most popular materials for children&apos;s ministry
             </p>
           </div>
 

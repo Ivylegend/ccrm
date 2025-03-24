@@ -12,7 +12,7 @@ const NewsletterSignup = () => {
             </h2>
             <p className="text-xl text-white/80 mb-6">
               Subscribe to receive updates about new resources, upcoming events,
-              and children's ministry insights.
+              and children&apos;s ministry insights.
             </p>
           </div>
           <div>

@@ -15,7 +15,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-display font-semibold mb-4">CCRM</h3>
             <p className="text-gray-300 mb-4">
-              Children's Creative Resource Ministry is dedicated to the
+              Children&apos;s Creative Resource Ministry is dedicated to the
               salvation and holistic development of children through creative
               programs and resources.
             </p>
@@ -97,7 +97,7 @@ const Footer = () => {
                   href="/programs#bible-clubs"
                   className="text-gray-300 hover:text-ccrm-yellow transition-colors"
                 >
-                  Children's Bible Clubs
+                  Children&apos;s Bible Clubs
                 </Link>
               </li>
               <li>
@@ -165,7 +165,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-gray-700 text-center text-gray-400">
           <p>
-            © {currentYear} Children's Creative Resource Ministry. All rights
+            © {currentYear} Children&apos;s Creative Resource Ministry. All rights
             reserved.
           </p>
         </div>

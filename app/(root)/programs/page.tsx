@@ -144,7 +144,7 @@ const Programs = () => {
             <p className="text-lg text-gray-600">
               Our programs are designed to make faith education engaging,
               meaningful, and fun. Each program incorporates creative elements
-              that capture children's imagination while teaching important
+              that capture children&apos;s imagination while teaching important
               values and biblical principles.
             </p>
           </div>

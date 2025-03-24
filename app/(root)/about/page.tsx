@@ -1,9 +1,6 @@
 import Image from "next/image";
 import PresidentPrayer from "@/public/president-prayer.png";
-import CCCamp from "@/public/combined-cccamp.png";
-import Combined from "@/public/combined2.png";
 import Banner from "@/public/about-banner.png";
-import HowToGetInvolved from "@/components/HowToGetInvolved";
 import founders from "@/public/founders.jpeg";
 import MissionStatement from "@/components/MissionStatement";
 import { CheckCircle, HandHeart } from "lucide-react";
@@ -47,8 +44,8 @@ export default function About() {
                 The President and founder of CEM, Evangelist Tony Chukwudile,
                 released Evangelists Nick and Shola Icha from their service in
                 June 2022 during the National Executive Council meeting of CEM.
-                Following this, the couple sought God's guidance for their next
-                steps in ministry, leading to the birth of CCRM.
+                Following this, the couple sought God&apos;s guidance for their
+                next steps in ministry, leading to the birth of CCRM.
               </p>
               <p className="text-gray-700 mb-4">
                 In August 2023, Evangelist Tony Chukwudile dedicated Evangelists
@@ -109,8 +106,8 @@ export default function About() {
           <div className="bg-white rounded-xl p-8 shadow-soft max-w-3xl mx-auto">
             <p className="text-gray-700 text-center text-lg leading-relaxed">
               Additionally, children will be helped to develop godly character,
-              discover their potential, and maximise it for God's glory and
-              humanity's benefit.
+              discover their potential, and maximise it for God&apos;s glory and
+              humanity&apos;s benefit.
             </p>
           </div>
         </div>
@@ -155,12 +152,12 @@ export default function About() {
       <section className="py-16 px-6 bg-ccrm-blue text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-display font-bold mb-8">
-            CCRM'S STRATEGY
+            CCRM&apos;S STRATEGY
           </h2>
           <p className="text-xl leading-relaxed">
-            Our fundamental strategy is to present God's Word in creative and
-            fun ways. Children are fun-loving, so it is essential to use
-            enjoyable methods to draw them to Christ, making God's Word
+            Our fundamental strategy is to present Go&apos;s Word in creative
+            and fun ways. Children are fun-loving, so it is essential to use
+            enjoyable methods to draw them to Christ, making God&apos;s Word
             appealing and interesting.
           </p>
         </div>
@@ -171,7 +168,7 @@ export default function About() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display font-bold text-ccrm-blue mb-4">
-              CCRM'S PROGRAMMES & PROJECTS
+              CCRM&apos;S PROGRAMMES & PROJECTS
             </h2>
             <div className="w-24 h-1 bg-ccrm-yellow mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -200,7 +197,7 @@ export default function About() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display font-bold text-ccrm-blue mb-4">
-              CCRM'S PROJECTS & NEEDS
+              CCRM&apos;S PROJECTS & NEEDS
             </h2>
             <div className="w-24 h-1 bg-ccrm-yellow mx-auto"></div>
           </div>
@@ -241,8 +238,8 @@ export default function About() {
             </h2>
             <div className="w-24 h-1 bg-ccrm-yellow mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join us in our mission to support children's spiritual growth and
-              development
+              Join us in our mission to support children&apos;s spiritual growth
+              and development
             </p>
           </div>
 
@@ -269,11 +266,11 @@ export default function About() {
       <section className="py-16 px-6 bg-ccrm-blue text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-display font-bold mb-6">
-            Join Our Mission to Support Children's Faith Journey
+            Join Our Mission to Support Children&apos;s Faith Journey
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
             Help us continue creating innovative resources and programs that
-            nurture children's spiritual growth.
+            nurture children&apos;s spiritual growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

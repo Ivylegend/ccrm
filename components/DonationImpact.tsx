@@ -34,7 +34,7 @@ const DonationImpact = () => {
             Your Donation Makes a Difference
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how your generous contributions directly impact children's
+            See how your generous contributions directly impact children&apos;s
             education across Nigeria.
           </p>
         </div>
@@ -58,8 +58,8 @@ const DonationImpact = () => {
 
         <div className="mt-12 max-w-2xl mx-auto text-center">
           <p className="text-lg text-gray-700">
-            "Every contribution, no matter the size, brings us closer to our
-            goal of taking the Word of God to every child in Nigeria."
+            &ldquo;Every contribution, no matter the size, brings us closer to
+            our goal of taking the Word of God to every child in Nigeria.&rdquo;
           </p>
           <p className="mt-2 font-medium">— CCRM Leadership</p>
         </div>

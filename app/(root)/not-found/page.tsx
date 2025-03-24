@@ -49,8 +49,8 @@ const NotFound = () => {
           </h1>
 
           <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
-            We're sorry, but the page you're looking for ({location}) doesn't
-            exist or has been moved.
+            We&apos;re sorry, but the page you&apos;re looking for ({location})
+            doesn&apos;t exist or has been moved.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -86,7 +86,7 @@ const NotFound = () => {
                 <DialogHeader>
                   <DialogTitle>Popular Pages</DialogTitle>
                   <DialogDescription>
-                    These might be what you're looking for:
+                    These might be what you&apos;re looking for:
                   </DialogDescription>
                 </DialogHeader>
                 <div className="grid grid-cols-2 gap-4 py-4">

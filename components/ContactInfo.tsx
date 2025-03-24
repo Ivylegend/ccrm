@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const ContactInfo = () => {
   return (
@@ -9,7 +9,7 @@ const ContactInfo = () => {
       </h2>
       <p className="text-lg text-gray-600 mb-8">
         Whether you have questions about our programs, need resources for your
-        children's ministry, or want to get involved, we're here to help.
+        children&apos;s ministry, or want to get involved, we&apos;re here to help.
       </p>
 
       <div className="space-y-6 mb-8">

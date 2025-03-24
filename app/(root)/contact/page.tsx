@@ -6,13 +6,6 @@ import ContactForm from "@/components/ContactForm";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real application, this would send the form data to a server
-    console.log("Form submitted");
-    // You could add toast notification here
-  };
-
   return (
     <>
       <HeroHeader

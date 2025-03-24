@@ -14,12 +14,6 @@ const AccountDetails = () => {
       accountNumber: "2301170538",
       branchCode: "221",
     },
-    // {
-    //   bank: "Access Bank",
-    //   accountName: "CCRM Nigeria Foundation",
-    //   accountNumber: "0124567890",
-    //   branchCode: "044",
-    // },
   ];
 
   return (
@@ -73,7 +67,7 @@ const AccountDetails = () => {
 
         <div className="mt-8 text-center text-gray-600 max-w-2xl mx-auto">
           <p className="text-sm">
-            Please kindly specify the donation's purpose.
+            Please kindly specify the donation&apos;s purpose.
           </p>
         </div>
       </div>

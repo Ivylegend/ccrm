@@ -1,44 +1,8 @@
 import React from "react";
-import {
-  Heart,
-  HeartHandshake,
-  School,
-  BookOpen,
-  HandHeart,
-} from "lucide-react";
+import { HandHeart } from "lucide-react";
 import { involvementWays } from "@/constants";
 
 const DonationOptions = () => {
-  const options = [
-    {
-      title: "Volunteering",
-      description:
-        "You can serve as a volunteer in any of our programmes (daily, weekly, fortnightly or monthly basis). You can also volunteer your professional services.",
-      icon: Heart,
-      color: "bg-pink-100 text-pink-600",
-    },
-    {
-      title: "Prayer Partner",
-      description:
-        "You can join our weekly WhatsApp prayer meetings on Mondays (18:00 WAT).",
-      icon: HeartHandshake,
-      color: "bg-purple-100 text-purple-600",
-    },
-    {
-      title: "Financial Partner",
-      description: "Send in regular financial support.",
-      icon: School,
-      color: "bg-blue-100 text-blue-600",
-    },
-    {
-      title: "Resource Donations",
-      description:
-        "You can donate materials, gift items, equipment, properties, etc.",
-      icon: BookOpen,
-      color: "bg-green-100 text-green-600",
-    },
-  ];
-
   return (
     <section className="py-16 px-6 bg-white" id="donation-options">
       <div className="container mx-auto">
@@ -47,7 +11,7 @@ const DonationOptions = () => {
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-display font-bold text-ccrm-blue mb-4">
-                CCRM'S PROJECTS & NEEDS
+                CCRM&apos;S PROJECTS & NEEDS
               </h2>
               <div className="w-24 h-1 bg-ccrm-yellow mx-auto"></div>
             </div>
@@ -91,8 +55,8 @@ const DonationOptions = () => {
               </h2>
               <div className="w-24 h-1 bg-ccrm-yellow mx-auto mb-6"></div>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Join us in our mission to support children's spiritual growth
-                and development
+                Join us in our mission to support children&apos;s spiritual
+                growth and development
               </p>
             </div>
 

@@ -28,7 +28,7 @@ const MissionStatement = ({
             textClassName
           )}
         >
-          "{text}"
+          {text}
         </p>
       </div>
     </div>
