@@ -1,91 +1,123 @@
 "use client";
 
-import * as React from "react";
-import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
+import { Heart, Menu, X, Image as ImageIcon } from "lucide-react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Logo from "../public/ccrm-logo.jpeg";
-import { Button } from "./ui/button";
-import MobileNav from "./MobileNav";
-import { ChevronDown } from "lucide-react";
-import { navLinks } from "@/constants";
+import Logo from "@/public/ccrm-logo.jpeg";
+import Image from "next/image";
 
 const Navbar = () => {
-  const [openDropdown, setOpenDropdown] = React.useState<string | null>(null);
-  const dropdownRef = React.useRef<HTMLDivElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = usePathname();
 
-  // Close dropdown when clicking outside
-  React.useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setOpenDropdown(null);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Programs", path: "/programs" },
+    { label: "Gallery", path: "/gallery", icon: ImageIcon },
+    { label: "Resources", path: "/resources" },
+    { label: "Contact", path: "/contact" },
+    { label: "Donate", path: "/donate", icon: Heart },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu when changing routes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
   return (
-    <nav className="w-full p-2 pr-6 shadow-md md:shadow-none z-40 sticky top-0 bg-white md:px-8 h-20 flex justify-between items-center">
-      {/* Logo */}
-      <div className="h-20 overflow-hidden">
-        <Image src={Logo} className="w-40 object-cover" alt="logo" />
-      </div>
-
-      {/* Navigation Links */}
-      <div className="hidden md:flex gap-12 text-[#0A1768] font-semibold capitalize relative">
-        {navLinks.map((link) => (
-          <div
-            key={link.name}
-            className="relative"
-            ref={link.dropdown ? dropdownRef : null}
-          >
-            {/* Parent Link */}
-            <Link
-              href={link.url}
-              onClick={(e) => {
-                if (link.dropdown) {
-                  e.preventDefault();
-                  setOpenDropdown(
-                    openDropdown === link.name ? null : link.name
-                  );
-                }
-              }}
-              className="hover:text-blue-600 cursor-pointer flex items-center gap-1"
-            >
-              {link.name} {link.dropdown && <ChevronDown />}
-            </Link>
-
-            {/* Dropdown Menu */}
-            {link.dropdown && openDropdown === link.name && (
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-lg p-2 z-50">
-                {link.dropdown.map((sublink) => (
-                  <Link
-                    key={sublink.name}
-                    href={sublink.url}
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    {sublink.name}
-                  </Link>
-                ))}
-              </div>
-            )}
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
+        isScrolled ? "py-3 bg-white shadow-md" : "py-5 bg-white"
+      )}
+    >
+      <nav className="container mx-auto px-6 flex items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="h-20 w-28 flex items-center justify-center">
+            <Image src={Logo} alt="CCRM Logo" className="w-full" />
           </div>
-        ))}
-      </div>
+          {/* <span className="font-display font-bold text-ccrm-blue text-xl hidden sm:inline-block animate-fade-in">
+            Children's Creative Resource Ministry
+          </span> */}
+        </Link>
 
-      {/* Donate Button */}
-      <Button
-        variant={"outline"}
-        className="hidden md:block font-semibold border-[#0A1768] text-[#0A1768]"
-      >
-        Donate
-      </Button>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-1 items-center">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className={cn(
+                "px-4 py-2 rounded-full font-semibold transition-all duration-300 flex items-center gap-1",
+                location === item.path
+                  ? "text-blue-500 bg-ccrm-yellow/10"
+                  : isScrolled
+                  ? "text-ccrm-blue hover:bg-gray-500"
+                  : "text-black hover:text-ccrm-blue hover:bg-gray-500"
+              )}
+            >
+              {item.icon && <item.icon size={16} />}
+              {item.label}
+              {item.path === "/donate" && (
+                <span className="bg-[#FBBF24] text-[#0A1768] text-xs px-2 py-0.5 rounded-full ml-1">
+                  Support
+                </span>
+              )}
+            </Link>
+          ))}
+        </div>
 
-      <MobileNav />
-    </nav>
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden text-ccrm-blue p-2"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </nav>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 glass-effect shadow-soft animate-fade-in">
+          <div className="py-4 px-6 flex flex-col space-y-3">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={cn(
+                  "px-4 py-3 rounded-md font-medium transition-all duration-200 flex items-center gap-2",
+                  location === item.path
+                    ? "text-ccrm-blue bg-ccrm-yellow/20"
+                    : "text-gray-700 hover:text-ccrm-blue hover:bg-gray-100"
+                )}
+              >
+                {item.icon && <item.icon size={18} />}
+                {item.label}
+                {item.path === "/donate" && (
+                  <span className="bg-[#FBBF24] text-[#0A1768] text-xs px-2 py-0.5 rounded-full ml-1">
+                    Support
+                  </span>
+                )}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 

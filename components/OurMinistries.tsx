@@ -40,10 +40,10 @@ const MinistryCard = ({
         <ImageStackCarousel images={images} splash={splash} />
       </div>
       <div className="md:w-1/2">
-        <h3 className="font-semibold text-[#0A1768] italic text-2xl">
+        <h3 className="font-semibold font-balsamiq text-[#0A1768] italic text-2xl">
           {title}
         </h3>
-        <p className="text-lg my-2 md:my-5">{description}</p>
+        <p className="text-lg my-2 md:my-5 font-comic">{description}</p>
       </div>
     </div>
   );
@@ -51,22 +51,22 @@ const MinistryCard = ({
 
 const OurMinistries = () => {
   return (
-    <section className="min-h-[80vh] p-6 md:p-10 lg:p-20">
+    <section className="min-h-[80vh] p-6 md:p-10 lg:p-20 bg-gray-50">
       <h2 className="text-center font-semibold text-3xl mt-8 mb-0 md:mt-0 lg:text-5xl text-[#0A1768]">
-        Our Ministries
+        Our Programs
       </h2>
 
       {/* Ministry Sections */}
       <MinistryCard
-        title="Annual holiday camps"
-        description="The Character & Charisma Camp is a free annual holiday camp in Ibadan, Nigeria, where children enjoy fun activities, learn new skills, and receive spiritual guidance in a nurturing environment."
+        title="Annual Holiday Camps"
+        description="This annual holiday camp for boys and girls (aged 4-15) commenced in August 2022. The camp aims to develop godly character and ethics in children, helping them discover their potential to serve God and humanity."
         splash={spalsh1}
         images={characterCharisma}
       />
 
       <MinistryCard
         title="Monthly Game Outreach"
-        description="Good News Club ministries take place in neighborhood settings such as homes, schools, and community centers all over the world and are designed to bring the Gospel of Christ to children on their level in their environment."
+        description="This event takes place on the first Sunday of every month at 4:30 pm. It is open to boys and girls in the neighbourhood, including those from non-Christian backgrounds. Various games and sports are played, followed by a brief sharing of God's Word and an altar call. Many children have invited Jesus into their hearts during these events. Snacks are served, and the children then depart. Some attendees have joined our weekly Bible Club programme."
         splash={spalsh2}
         reverse
         images={gamesOutreach}
@@ -74,7 +74,7 @@ const OurMinistries = () => {
 
       <MinistryCard
         title="Easter Outreach"
-        description="Bible Clubs take place in neighborhood settings such as homes, schools, and community centers all over the world and are designed to bring the Gospel of Christ to children on their level in their environment."
+        description="On Easter Monday at 10 am, the children gather for worship, a message and altar call. They are then released to their age-grouped classes for Bible lessons and activities. Lunch is served, followed by outdoor games. The children are then dismissed."
         splash={spalsh3}
         images={easterOutreach}
       />
@@ -88,14 +88,14 @@ const OurMinistries = () => {
       />
 
       <MinistryCard
-        title="Distribution of children's Bibles and resources"
+        title="Distribution of children's Bibles and Resources"
         description="Good News Club ministries take place in neighborhood settings such as homes, schools, and community centers all over the world and are designed to bring the Gospel of Christ to children on their level in their environment."
         splash={spalsh1}
         images={bibleDistribution}
       />
 
       <MinistryCard
-        title="Christmas Outreaches"
+        title="Christmas Outreach"
         description="Good News Club ministries take place in neighborhood settings such as homes, schools, and community centers all over the world and are designed to bring the Gospel of Christ to children on their level in their environment."
         splash={spalsh3}
         reverse

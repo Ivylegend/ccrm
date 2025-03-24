@@ -69,7 +69,7 @@ const MobileNav = () => {
             variant="outline"
             className="mt-6 font-semibold border-[#0A1768] text-[#0A1768]"
           >
-            Donate
+            Support the work
           </Button>
         </SheetContent>
       </Sheet>

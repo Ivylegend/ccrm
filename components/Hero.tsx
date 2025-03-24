@@ -4,10 +4,10 @@ import HeroImg from "@/public/hero-image.png";
 
 const Hero = () => {
   return (
-    <div className="w-full xl:min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-8 p-6 pb-16 md:p-10 lg:p-20">
+    <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 p-6 pb-16 md:p-10 lg:p-20 mt-20">
       <div className="w-full md:w-1/2 flex justify-between h-full flex-col md:space-y-5">
         <div className="space-y-5 lg:py-10">
-          <h1 className="font-bold text-4xl lg:text-6xl text-[#0A1768]">
+          <h1 className="font-bold text-4xl lg:text-6xl text-[#0a1666] font-balsamiq">
             Children&apos;s Creative Resource Ministry
           </h1>
           <p className="font-medium text-lg lg:text-xl">
@@ -17,7 +17,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <p className="italic text-sm md:text-base md:mt-auto underline font-semibold">
+        <p className="italic text-sm md:text-base font-balsamiq md:mt-auto underline font-semibold">
           &quot;Teaching and equipping children for Christ&quot;
         </p>
       </div>
