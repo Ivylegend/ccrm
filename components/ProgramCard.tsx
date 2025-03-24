@@ -33,7 +33,7 @@ const ProgramCard = ({
 
   return (
     <CardWrapper>
-      <div className="bg-white rounded-xl p-6 shadow-soft hover-lift h-full flex flex-col transition-all duration-300">
+      <div className="bg-white rounded-xl p-6 shadow-md min-w-52 max-w-96 hover-lift h-full flex flex-col transition-all duration-300">
         <div
           className={cn(
             "w-14 h-14 rounded-lg flex items-center justify-center text-white mb-5",

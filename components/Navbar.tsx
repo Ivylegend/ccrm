@@ -44,18 +44,15 @@ const Navbar = () => {
         isScrolled ? "py-3 bg-white shadow-md" : "py-5 bg-white"
       )}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav className="w-full mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <div className="h-20 w-28 flex items-center justify-center">
             <Image src={Logo} alt="CCRM Logo" className="w-full" />
           </div>
-          {/* <span className="font-display font-bold text-ccrm-blue text-xl hidden sm:inline-block animate-fade-in">
-            Children's Creative Resource Ministry
-          </span> */}
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-1 items-center">
+        <div className="hidden lg:flex space-x-1 items-center">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -83,7 +80,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-ccrm-blue p-2"
+          className="lg:hidden text-ccrm-blue p-2"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

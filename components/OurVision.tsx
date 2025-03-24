@@ -30,7 +30,7 @@ const OurVision = () => {
     },
   ];
   return (
-    <div className="px-6 md:px-10 lg:px-20 py-10 flex flex-col md:flex-row items-center justify-center gap-8 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500">
+    <div className="px-6 md:px-10 lg:px-20 py-10 flex flex-col lg:flex-row items-center justify-center gap-8 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500">
       {/* <Boxes
         title={"Our Vision"}
         body={
