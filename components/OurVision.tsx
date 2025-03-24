@@ -9,7 +9,7 @@ const OurVision = () => {
       description:
         "Scriptural basis: The Lord gave the word: great was the company of those that published it. Psalm 68:11 (KJV) A wise teacher makes learning a joy; Proverbs 15:2a (TLB)",
       icon: <BookOpen size={24} />,
-      link: "/programs#bible-clubs",
+      link: "/about#vision",
       iconClassName: "bg-green-500",
     },
     {
@@ -17,7 +17,7 @@ const OurVision = () => {
       description:
         "CCRM seeks to creatively share the holistic gospel of our Lord Jesus Christ with boys and girls. The vision is to see them saved, filled with the Holy Spirit, and discipled. Additionally, they will be helped to develop godly character, discover their potential, and maximise it for God's glory and humanity's benefit.",
       icon: <Tent size={24} />,
-      link: "/programs#holiday-camps",
+      link: "/about#mission",
       iconClassName: "bg-purple-500",
     },
     {
@@ -25,7 +25,7 @@ const OurVision = () => {
       description:
         "Join us in our mission to support children's spiritual growth and developmentJoin us in our mission to support children's spiritual growth and development",
       icon: <Gamepad size={24} />,
-      link: "/programs#game-outreach",
+      link: "/about#get-involved",
       iconClassName: "bg-blue-500",
     },
   ];

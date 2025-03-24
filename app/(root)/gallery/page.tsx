@@ -84,7 +84,6 @@ const Gallery = () => {
         title="Our Gallery"
         subtitle="Explore moments of joy, learning, and spiritual growth from our children's ministry"
         backgroundImage="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-        height="min-h-[500px]"
       />
 
       {/* Filter Section */}

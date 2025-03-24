@@ -1,6 +1,5 @@
 import Image from "next/image";
 import PresidentPrayer from "@/public/president-prayer.png";
-import Banner from "@/public/about-banner.png";
 import founders from "@/public/founders.jpeg";
 import MissionStatement from "@/components/MissionStatement";
 import { CheckCircle, HandHeart } from "lucide-react";
@@ -8,15 +7,18 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ProgramCard from "@/components/ProgramCard";
 import { involvementWays, programs } from "@/constants";
+import HeroHeader from "@/components/HeroHeader";
 
 export default function About() {
   return (
     <div>
-      <div className="bg-red-500 w-full h-100">
-        <Image src={Banner} alt="banner" className="w-full h-full" />
-      </div>
+      <HeroHeader
+        title="About Children's Creative Resource Ministry"
+        subtitle="A Christian missionary organisation focused on the salvation and holistic development of children."
+        backgroundImage="/about-banner.png"
+      />
 
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-white" id="how-it-began">
         <div className="container mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-display font-bold text-ccrm-blue mb-2">
@@ -90,13 +92,15 @@ export default function About() {
         </div>
       </div>
 
-      <MissionStatement
-        title="CCRM'S Vision & Mission Statement"
-        text="CCRM seeks to creatively reach boys and girls with the holistic gospel of our Lord Jesus Christ. The vision is to see them saved, filled with the Holy Spirit and discipled. Additionally, they will be helped to develop godly character, discover their potentials and maximise them for Gods glory and for the benefit of humanity."
-        className="bg-gray-50"
-      />
+      <section id="vision">
+        <MissionStatement
+          title="CCRM'S Vision & Mission Statement"
+          text="CCRM seeks to creatively reach boys and girls with the holistic gospel of our Lord Jesus Christ. The vision is to see them saved, filled with the Holy Spirit and discipled. Additionally, they will be helped to develop godly character, discover their potentials and maximise them for Gods glory and for the benefit of humanity."
+          className="bg-gray-50"
+        />
+      </section>
 
-      <section className="py-10 px-6 bg-gray-50">
+      <section className="py-10 px-6 bg-gray-50" id="mission">
         <div className="container mx-auto">
           <div className="text-center mb-8">
             <p className="text-lg text-gray-700 italic">
@@ -230,7 +234,7 @@ export default function About() {
       </section>
 
       {/* How to Get Involved Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-white" id="get-involved">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display font-bold text-ccrm-blue mb-4">
