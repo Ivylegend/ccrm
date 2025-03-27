@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { X, ChevronLeft, ChevronRight, Tag } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { galleryImages } from "@/constants";
+import { galleryImages } from "@/constants/images";
 
 const Gallery = () => {
   // State
@@ -24,11 +24,13 @@ const Gallery = () => {
     setImages(galleryImages);
     setFilteredImages(galleryImages);
 
-    // Extract all unique tags
-    const allTags = Array.from(
-      new Set(galleryImages.flatMap((img) => img.tags))
-    ).sort();
-    setAvailableTags(allTags);
+    // Extract unique tags
+    const allTags = new Set<string>();
+    galleryImages.forEach((img) => {
+      img.tags.forEach((tag) => allTags.add(tag));
+    });
+
+    setAvailableTags(Array.from(allTags).sort());
   }, []);
 
   // Handle tag filtering

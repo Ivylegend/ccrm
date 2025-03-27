@@ -13,7 +13,7 @@ import {
   christmasOutreach,
   easterOutreach,
   gamesOutreach,
-} from "@/constants";
+} from "@/constants/images";
 
 declare type MinistryCardProps = {
   title: string;
@@ -96,7 +96,7 @@ const OurMinistries = () => {
 
       <MinistryCard
         title="Christmas Outreach"
-        description="Good News Club ministries take place in neighborhood settings such as homes, schools, and community centers all over the world and are designed to bring the Gospel of Christ to children on their level in their environment."
+        description="Our Christmas programs share the joy and true meaning of the season through festive events for children and families. From nativity plays to gift-giving initiatives, these celebrations create meaningful holiday traditions centered on the gift of Christ."
         splash={spalsh3}
         reverse
         images={christmasOutreach}
