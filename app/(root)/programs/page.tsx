@@ -9,6 +9,7 @@ import easterOutreach from "@/public/easter-outreach/3.jpeg";
 import games from "@/public/easter-outreach/5.jpeg";
 import christmasOutreach from "@/public/christmas-outreach/2.jpeg";
 import bibleDistribution from "@/public/bible-distribution/2.jpeg";
+import trainingImg from "@/public/training/mum-train.png";
 import HeroHeader from "@/components/HeroHeader";
 
 const Programs = () => {
@@ -112,15 +113,15 @@ const Programs = () => {
       id: "training",
       title: "Training Programmes",
       description:
-        "Our Christmas programs share the joy and true meaning of the season through festive events for children and families. From nativity plays to gift-giving initiatives, these celebrations create meaningful holiday traditions centered on the gift of Christ.",
+        "At CCRM, we're passionate about equipping children's teachers, caregivers, and parents with the skills and knowledge needed to inspire and nurture young minds. Our comprehensive training programmes, offered both online and onsite, provide practical insights and expert guidance on:",
       activities: [
-        "Interactive nativity experiences",
-        "Christmas caroling and music programs",
-        "Gift-giving projects for children in need",
-        "Christmas craft workshops",
-        "Family-friendly Christmas services and pageants",
+        "Effective evangelism and discipleship strategies for children",
+        "Creating engaging and interactive learning experiences",
+        "Nurturing spiritual growth and development in children",
+        "Join us and discover how you can make a lasting impact on the lives of children.",
+        "Together, let's raise a generation of young champions for Christ!",
       ],
-      image: christmasOutreach,
+      image: trainingImg,
       icon: <Gift size={24} />,
       color: "bg-red-500",
     },

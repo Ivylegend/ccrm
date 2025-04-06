@@ -93,12 +93,14 @@ const Resources = () => {
                       <li className="text-gray-600 mb-4">{text}</li>
                     </ul>
                   ))}
-                  <Button
-                    variant="outline"
-                    className="w-full border-ccrm-blue text-ccrm-blue hover:bg-ccrm-blue hover:text-white"
-                  >
-                    <Download size={16} className="mr-2" /> Request Resource
-                  </Button>
+                  <Link href="/contact">
+                    <Button
+                      variant="outline"
+                      className="w-full border-ccrm-blue text-ccrm-blue hover:bg-ccrm-blue hover:text-white"
+                    >
+                      <Download size={16} className="mr-2" /> Request Resource
+                    </Button>
+                  </Link>
                 </div>
               </div>
             ))}

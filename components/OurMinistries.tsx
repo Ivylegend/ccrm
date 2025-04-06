@@ -13,6 +13,7 @@ import {
   christmasOutreach,
   easterOutreach,
   gamesOutreach,
+  trainingPics,
 } from "@/constants/images";
 
 declare type MinistryCardProps = {
@@ -100,6 +101,13 @@ const OurMinistries = () => {
         splash={spalsh3}
         reverse
         images={christmasOutreach}
+      />
+
+      <MinistryCard
+        title="Training Programmes"
+        description="At CCRM, we're passionate about equipping children's teachers, caregivers, and parents with the skills and knowledge needed to inspire and nurture young minds. Our comprehensive training programmes, offered both online and onsite, provide practical insights and expert guidance on topics such as teaching, parenting, and spiritual growth."
+        splash={spalsh3}
+        images={trainingPics}
       />
     </section>
   );

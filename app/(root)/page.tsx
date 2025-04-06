@@ -93,10 +93,12 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 lg:order-2 rounded-xl overflow-hidden shadow-glass">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1533222535026-754c501569dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
                 alt="Children engaged in learning activities"
                 className="w-full h-auto object-cover"
+                width={2340}
+                height={1500}
               />
             </div>
           </div>

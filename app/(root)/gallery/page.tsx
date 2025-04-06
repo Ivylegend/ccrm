@@ -9,6 +9,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { X, ChevronLeft, ChevronRight, Tag } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { galleryImages } from "@/constants/images";
+import Image from "next/image";
 
 const Gallery = () => {
   // State
@@ -141,7 +142,7 @@ const Gallery = () => {
                 onClick={() => openImageModal(image)}
               >
                 <AspectRatio ratio={4 / 3}>
-                  <img
+                  <Image
                     src={image.thumbnail}
                     alt={image.alt}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -223,7 +224,7 @@ const Gallery = () => {
             {/* Current image */}
             {selectedImage && (
               <>
-                <img
+                <Image
                   src={selectedImage.src}
                   alt={selectedImage.alt}
                   className="max-h-full max-w-full object-contain"

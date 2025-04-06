@@ -11,6 +11,7 @@ import g10 from "@/public/game-outreach/10.jpeg";
 import g11 from "@/public/game-outreach/11.jpeg";
 import g12 from "@/public/game-outreach/12.jpeg";
 import g13 from "@/public/game-outreach/13.jpeg";
+import g14 from "@/public/game-outreach/14.jpeg";
 
 import cO1 from "@/public/christmas-outreach/1.jpeg";
 import cO2 from "@/public/christmas-outreach/2.jpeg";
@@ -57,6 +58,9 @@ import bd2 from "@/public/bible-distribution/2.jpeg";
 
 import bicycle3 from "@/public/about-image.png";
 
+import trainingPic1 from "@/public/training/dad-train.jpeg";
+import trainingPic2 from "@/public/training/mum-train.png";
+
 const importedImages = [
   { name: "bicycle", src: bicycle },
   { name: "bicycle3", src: bicycle3 },
@@ -72,6 +76,7 @@ const importedImages = [
   { name: "g11", src: g11 },
   { name: "g12", src: g12 },
   { name: "g13", src: g13 },
+  { name: "g14", src: g14 },
   { name: "cO1", src: cO1 },
   { name: "cO2", src: cO2 },
   { name: "cO3", src: cO3 },
@@ -119,7 +124,7 @@ const getTags = (src: string): string[] => {
   if (src.includes("gO")) return ["games outreach", "games"];
   if (src.includes("cO")) return ["christmas outreach"];
   if (src.includes("cc")) return ["outreach"];
-  if (src.includes("eo")) return ["easter outreach", "outreach",];
+  if (src.includes("eo")) return ["easter outreach", "outreach"];
   if (src.includes("bd")) return ["bible distribution"];
   if (tags.length === 0) tags.push("miscellaneous"); // Fallback
 
@@ -127,7 +132,7 @@ const getTags = (src: string): string[] => {
 };
 
 export const bicycleImages = [bicycle, bicycle3, bicycle, bicycle3];
-export const gamesOutreach = [gO1, gO2, bicycle, gO4, gO5, gO6, gO7, gO8, gO9];
+export const gamesOutreach = [gO1, gO2, bicycle, gO4, gO5, gO6, gO7, gO8, gO9, g10, g11, g12, g13, g14];
 export const christmasOutreach = [
   cO1,
   cO2,
@@ -162,6 +167,8 @@ export const characterCharisma = [
   cc11,
 ];
 export const bibleDistribution = [bd1, bd2];
+
+export const trainingPics = [trainingPic1, trainingPic2];
 
 export const galleryImages: GalleryImage[] = importedImages.map(
   (img, index) => ({
