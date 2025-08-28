@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -56,54 +57,112 @@ const HeroHeader = ({
   }, [titleArray.length, textRotationInterval]);
 
   return (
-    <div
+    <motion.div
       className={`relative ${height} w-full flex items-center justify-center overflow-hidden`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
       {/* Overlay */}
-      <div className={`absolute inset-0 ${overlayOpacity}`}></div>
+      <motion.div
+        className={`absolute inset-0 ${overlayOpacity}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
+
+      {/* Floating background elements */}
+      <motion.div
+        className="absolute top-20 left-20 w-16 h-16 bg-white/10 rounded-full"
+        animate={{
+          y: [0, -20, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-32 right-16 w-12 h-12 bg-ccrm-yellow/20 rounded-full"
+        animate={{
+          y: [0, 15, 0],
+          x: [0, -10, 0],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      />
 
       {/* Content */}
-      <div
-        className={`container relative z-10 px-6 py-16 flex flex-col ${alignmentClasses[alignment]} space-y-6 animate-fade-in`}
+      <motion.div
+        className={`container relative z-10 px-6 py-16 flex flex-col ${alignmentClasses[alignment]} space-y-6`}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white max-w-3xl leading-tight">
-          <span
-            className={`transition-opacity duration-500 ${
-              isChanging ? "opacity-0" : "opacity-100"
-            }`}
+        <motion.h1
+          className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white max-w-3xl leading-tight"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <motion.span
+            key={currentTitleIndex}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
           >
             {titleArray[currentTitleIndex]}
-          </span>
-        </h1>
+          </motion.span>
+        </motion.h1>
 
         {subtitle && (
-          <p className="text-xl md:text-2xl text-white/90 max-w-2xl font-light">
+          <motion.p
+            className="text-xl md:text-2xl text-white/90 max-w-2xl font-light"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
             {subtitle}
-          </p>
+          </motion.p>
         )}
 
         {buttonText && buttonLink && (
-          <div
-            className="mt-4 animate-slide-in"
-            style={{ animationDelay: "0.2s" }}
+          <motion.div
+            className="mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
           >
             <Link href={buttonLink}>
-              <Button
-                size="lg"
-                className="bg-ccrm-yellow text-ccrm-blue font-semibold hover:bg-white hover:text-[#0A1768] transition-all duration-300 cursor-pointer"
+              <motion.div
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
               >
-                {buttonText}
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-ccrm-yellow text-ccrm-blue font-semibold hover:bg-white hover:text-[#0A1768] transition-all duration-300 cursor-pointer"
+                >
+                  {buttonText}
+                </Button>
+              </motion.div>
             </Link>
-          </div>
+          </motion.div>
         )}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
