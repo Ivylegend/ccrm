@@ -16,6 +16,9 @@ const balsamiqSans = Balsamiq_Sans({
 export const metadata: Metadata = {
   title: "Children Creative Resource Miinistry",
   description: "Teaching and equipping children for Christ",
+  icons: {
+    icon: "/ccrm-logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -56,14 +56,11 @@ import eo9 from "@/public/easter-outreach/9.jpeg";
 import bd1 from "@/public/bible-distribution/1.jpeg";
 import bd2 from "@/public/bible-distribution/2.jpeg";
 
-import bicycle3 from "@/public/about-image.png";
-
 import trainingPic1 from "@/public/training/dad-train.jpeg";
 import trainingPic2 from "@/public/training/mum-train.png";
 
 const importedImages = [
   { name: "bicycle", src: bicycle },
-  { name: "bicycle3", src: bicycle3 },
   { name: "gO1", src: gO1 },
   { name: "gO2", src: gO2 },
   { name: "gO4", src: gO4 },
@@ -120,18 +117,18 @@ const importedImages = [
 const getTags = (src: string): string[] => {
   const tags: string[] = [];
 
-  if (src.includes("bicycle")) return ["games", "outreach"];
-  if (src.includes("gO")) return ["games outreach", "games"];
+  if (src.includes("bicycle")) return ["games outreach"];
+  if (src.includes("gO")) return ["games outreach"];
   if (src.includes("cO")) return ["christmas outreach"];
-  if (src.includes("cc")) return ["outreach"];
-  if (src.includes("eo")) return ["easter outreach", "outreach"];
+  if (src.includes("cc")) return ["camps"];
+  if (src.includes("eo")) return ["easter outreach"];
   if (src.includes("bd")) return ["bible distribution"];
   if (tags.length === 0) tags.push("miscellaneous"); // Fallback
 
   return tags;
 };
 
-export const bicycleImages = [bicycle, bicycle3, bicycle, bicycle3];
+export const bicycleImages = [bicycle, bicycle];
 export const gamesOutreach = [gO1, gO2, bicycle, gO4, gO5, gO6, gO7, gO8, gO9, g10, g11, g12, g13, g14];
 export const christmasOutreach = [
   cO1,
