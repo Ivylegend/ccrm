@@ -14,6 +14,13 @@ import fleshandspirit from "@/public/games/flesh-and-spirit.jpg";
 import overcomers from "@/public/games/overcomers.jpg";
 import lovecity from "@/public/games/lovecity.jpg";
 import cardgames from "@/public/games/card-games.jpg";
+import gospelTract from "@/public/resources/gospel-tracts.jpg";
+import visualAids from "@/public/resources/training-kits.jpg";
+import holySpiritFlashcards from "@/public/resources/holy-spirit-flashcards.jpg";
+import holySpiritManual from "@/public/resources/holy-spirit-manual.jpg";
+import salvationFlashcards from "@/public/resources/salvation-flashcards.jpg";
+import salvationManual from "@/public/resources/salvation-manual.jpg";
+
 
 export const footerLinks = [
   {
@@ -233,4 +240,95 @@ export const featuredResources = [
     type: "Bible Card Games",
     image: cardgames,
   },
+
+  {
+    title: "Children's Gospel Tract",
+    description: {
+      title:
+        "A child-friendly gospel presentation designed to clearly communicate salvation.",
+      body: [
+        "Simple and engaging message of new life in Christ",
+        "Colorful illustrations for easy understanding",
+      ],
+    },
+    type: "Gospel Tracts",
+    isNewRelease: true,
+    image: gospelTract,
+  },
+
+  {
+    title: "Visual Aids Training Kit",
+    description: {
+      title:
+        "A complete visual teaching toolkit to enhance children's ministry lessons.",
+      body: [
+        "Illustrated teaching aids and activity sheets",
+        "Structured lesson guidance for teachers",
+      ],
+    },
+    type: "Training Material",
+    isNewRelease: true,
+    image: visualAids,
+  },
+
+  {
+    title: "Holy Spirit Lesson Flashcards",
+    description: {
+      title:
+        "Engaging flashcards designed to teach children about the Holy Spirit.",
+      body: [
+        "Biblical truths made simple and memorable",
+        "Perfect for classroom and outreach settings",
+      ],
+    },
+    type: "Flashcards",
+    isNewRelease: true,
+    image: holySpiritFlashcards,
+  },
+
+  {
+    title: "Holy Spirit Lesson Teacher's Manual",
+    description: {
+      title:
+        "A comprehensive guide to teaching children about the Holy Spirit.",
+      body: [
+        "Structured lesson plans and teaching notes",
+        "Scripture references and practical applications",
+      ],
+    },
+    type: "Teacher's Manual",
+    isNewRelease: true,
+    image: holySpiritManual,
+  },
+
+  {
+    title: "Salvation & Discipleship Flashcards",
+    description: {
+      title:
+        "Visual flashcards that explain salvation and foundational discipleship truths.",
+      body: [
+        "Clear gospel teaching for young learners",
+        "Great for Bible clubs and outreach",
+      ],
+    },
+    type: "Flashcards",
+    isNewRelease: true,
+    image: salvationFlashcards,
+  },
+
+  {
+    title: "Salvation & Discipleship Lessons - Teacher's Manual",
+    description: {
+      title:
+        "A structured curriculum for teaching salvation and discipleship principles.",
+      body: [
+        "Step-by-step lesson breakdown",
+        "Practical tools for effective children's ministry",
+      ],
+    },
+    type: "Teacher's Manual",
+    isNewRelease: true,
+    image: salvationManual,
+  },
+
 ];

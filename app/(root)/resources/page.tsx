@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { featuredResources, resourceCategories } from "@/constants";
-import { Download } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import HeroHeader from "@/components/HeroHeader";
@@ -93,14 +92,33 @@ const Resources = () => {
                       <li className="text-gray-600 mb-4">{text}</li>
                     </ul>
                   ))}
-                  <Link href="/contact">
-                    <Button
-                      variant="outline"
-                      className="w-full border-ccrm-blue text-ccrm-blue hover:bg-ccrm-blue hover:text-white"
-                    >
-                      <Download size={16} className="mr-2" /> Request Resource
-                    </Button>
-                  </Link>
+                  <div className="mt-6 border-t pt-4 text-center">
+                    {resource.isNewRelease && <div>
+                      <p className="text-sm font-semibold text-ccrm-blue">
+                        New Release
+                      </p>
+                      <p className="text-sm text-gray-600 mb-3">
+                        Hard copies available for purchase
+                      </p>
+                    </div>}
+
+                    <div className="flex flex-col gap-2">
+                      <a
+                        href="tel:+2347084925570"
+                        className="rounded-md bg-ccrm-blue px-4 py-2 font-medium text-white transition hover:opacity-90"
+                      >
+                        📞 0708 492 5570
+                      </a>
+
+                      <a
+                        href="tel:+2348062302890"
+                        className="rounded-md bg-ccrm-yellow px-4 py-2 font-medium text-ccrm-blue transition hover:opacity-90"
+                      >
+                        📞 0806 230 2890
+                      </a>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             ))}
