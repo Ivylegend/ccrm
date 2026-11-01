@@ -17,15 +17,14 @@ const AccountDetails = () => {
   ];
 
   return (
-    <section className="py-16 px-6 bg-gray-50">
+    <section id="bank-transfer" className="py-16 px-6 bg-gray-50 scroll-mt-24">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display font-bold text-ccrm-blue mb-4">
-            Local Account Information
+            Donate by Bank Transfer
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            You can make direct transfers to our Nigerian bank accounts to
-            support our ministry.
+            Transfer your donation to the ministry’s account below. Please include the donation’s purpose in your transfer reference.
           </p>
         </div>
 
@@ -67,7 +66,7 @@ const AccountDetails = () => {
 
         <div className="mt-8 text-center text-gray-600 max-w-2xl mx-auto">
           <p className="text-sm">
-            Please kindly specify the donation&apos;s purpose.
+            After transferring, you can contact the ministry at ccrmjuly2022@gmail.com with your transfer reference if you need an acknowledgement.
           </p>
         </div>
       </div>
